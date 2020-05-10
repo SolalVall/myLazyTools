@@ -1,0 +1,84 @@
+"""
+" Install vim-plug and load all plugins (https://github.com/junegunn/vim-plug/wiki/tips)
+"""
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+"""
+" Configure plugins
+"""
+call plug#begin('~/.vim/plugged')
+
+" Nerdtree (https://github.com/preservim/nerdtree)
+Plug 'preservim/nerdtree'
+
+" Nerdtree git (https://github.com/Xuyuanp/nerdtree-git-plugin) 
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Nerdtree icons (https://github.com/ryanoasis/vim-devicons)
+Plug 'ryanoasis/vim-devicons'
+
+" Lightline (https://github.com/itchyny/lightline.vim)
+Plug 'itchyny/lightline.vim'
+
+" Gitgutter (https://github.com/airblade/vim-gitgutter)
+Plug 'airblade/vim-gitgutter'
+
+" Multiple cursor (https://github.com/terryma/vim-multiple-cursors)
+Plug 'terryma/vim-multiple-cursors'
+
+" Surrond (https://github.com/tpope/vim-surround)
+Plug 'tpope/vim-surround'
+
+" Emmet (https://github.com/mattn/emmet-vim)
+Plug 'mattn/emmet-vim'
+
+" Youcompleteme  (https://github.com/ycm-core/YouCompleteMe)
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+" Color theme (https://github.com/arcticicestudio/nord-vim)
+Plug 'arcticicestudio/nord-vim'
+call plug#end()
+
+"""
+" Nerdtree
+"""
+" Load nerdtree on startup and move from nerdtree window buffer to file
+" and load liteline at the same time
+autocmd VimEnter * NERDTree 
+autocmd VimEnter * wincmd p | call lightline#update()
+
+" Map nertree to Ctrl+o
+nnoremap <C-o> :NERDTreeToggle<CR>
+
+" Close nerdtree if it's the last window open in vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"""
+" Lightline
+"""
+" Theme
+let g:lightline = {
+\ 'colorscheme': 'nord',
+\ }
+
+" Default setting
+set laststatus=2
+
+" Remove the vim default --insert-- status
+set noshowmode
+
+"""
+" Colorscheme
+"""
+colorscheme nord
+
+"""
+" Global Configuration
+"""
+syntax on
+set number
+set relativenumber
