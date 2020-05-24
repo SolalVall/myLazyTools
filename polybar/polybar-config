@@ -1,11 +1,11 @@
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;
-;;	    ____        __      __              
+;;	    ____        __      __
 ;;	   / __ \____  / /_  __/ /_  ____ ______
 ;;	  / /_/ / __ \/ / / / / __ \/ __ `/ ___/
-;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /    
-;;	/_/    \____/_/\__, /_.___/\__,_/_/     
-;;	              /____/                    
+;;	 / ____/ /_/ / / /_/ / /_/ / /_/ / /
+;;	/_/    \____/_/\__, /_.___/\__,_/_/
+;;	              /____/
 ;;
 ;; Created By Aditya Shakya @adi1090x
 ;;
@@ -17,21 +17,21 @@
 
 [color]
 
-; Active Shade 
-shade1 = #33691E
-shade2 = #558B2F
-shade3 = #689F38
-shade4 = #7CB342
-shade5 = #8BC34A
-shade6 = #9CCC65
-shade7 = #AED581
-shade8 = #C5E1A5
+; Active Shade
+shade1 = #263238
+shade2 = #37474F
+shade3 = #455A64
+shade4 = #546E7A
+shade5 = #607D8B
+shade6 = #78909C
+shade7 = #90A4AE
+shade8 = #B0BEC5
 
 ;; Active Colors
 bground = #1D1F28
 fground = #f7f7f7
 ;borderbg = #f7f7f7
-accent = #7CB342
+accent = #546E7A
 modulefg = #f7f7f7
 modulefg-alt = #f7f7f7
 
@@ -116,13 +116,13 @@ modules-right = right7 colors right6 alsa right5 battery right4 network right3 c
 separator =
 spacing = 0
 dim-value = 1.0
-wm-name = 
-locale = 
+wm-name =
+locale =
 
 tray-position = none
 tray-detached = false
 tray-maxsize = 16
-tray-transparent = false 
+tray-transparent = false
 tray-background = ${color.bground}
 tray-offset-x = 0
 tray-offset-y = 0
@@ -145,7 +145,7 @@ compositing-overline = over
 compositing-underline = over
 compositing-border = over
 
-pseudo-transparency = false 
+pseudo-transparency = false
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;; MODULES
@@ -292,7 +292,7 @@ ramp-volume-4 = 
 [module/cpu]
 type = internal/cpu
 
-interval = 1.0 
+interval = 1.0
 
 format = <label>
 format-prefix = 
@@ -390,7 +390,7 @@ menu-2-0-exec = systemctl poweroff
 menu-2-1 = back
 menu-2-1-exec = menu-open-0
 
-format-spacing = 1 
+format-spacing = 1
 format-background = ${color.shade1}
 format-foreground = ${color.modulefg}
 format-padding = 1
@@ -442,9 +442,8 @@ click-right = ~/.config/polybar/scripts/type-switch.sh &
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
 ;;	   / ____/ __ \/ ____/
-;;	  / __/ / / / / /_    
-;;	 / /___/ /_/ / __/    
-;;	/_____/\____/_/       
+;;	  / __/ / / / / /_
+;;	 / /___/ /_/ / __/
+;;	/_____/\____/_/
 ;;
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-

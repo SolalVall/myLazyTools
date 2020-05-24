@@ -1,7 +1,7 @@
 ROFI_CONFIG_LOCATION=$HOME/.config/rofi
 ROFI_TOOL_LOCATION=$HOME/.lazyTools.d/rofi
 ROFI_THEME_FILE="rofi-theme"
-ROFI_CONFIG_FILE="rofi-conf"
+ROFI_CONFIG_FILE="rofi-config"
 
 ## Copy config
 cp $ROFI_TOOL_LOCATION/$ROFI_THEME_FILE $ROFI_CONFIG_LOCATION/nord.rasi

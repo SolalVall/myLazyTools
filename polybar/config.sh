@@ -1,10 +1,10 @@
-POLYBAR_THEME=polybar-8
+POLYBAR_THEME=polybar-6
 POLYBAR_CONFIG_LOCATION=$HOME/.config/polybar
 POLYBAR_TOOL_LOCATION=$HOME/.lazyTools.d/polybar
 POLYBAR_CONFIG_FILE="polybar-config"
 
 ###
-# Configure polybar in i3 with a theme (https://github.com/adi1090x/polybar-themes) 
+# Configure polybar in i3 with a theme (https://github.com/adi1090x/polybar-themes)
 ##
 ## Clone
 git clone https://github.com/adi1090x/polybar-themes
