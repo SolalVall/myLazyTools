@@ -18,11 +18,14 @@ font pango:DejaVu Sans Mono 10, FontAwesome 10
 # Configure i3 gaps between pane
 # You can also use any non-zero value if you'd like to have a border
 for_window [class=".*"] border pixel 2
-gaps inner 30 
+gaps inner 30
 gaps outer 30
 
 # Configure feh
 exec_always --no-startup-id feh --bg-scale ~/Images/ice_wallpaper.jpg
+
+#Launch Xresources (used for urxvt)
+exec xrdb ~/.Xresources
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
