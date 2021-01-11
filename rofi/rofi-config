@@ -65,7 +65,7 @@ rofi.terminal: rofi-sensible-terminalrofi.terminal: rofi-sensible-terminal
 ! THEMING
 ! ----------------------------------------------------------------------------
 
-rofi.theme: ~/.config/rofi/nord.rasi
+rofi.theme: ~/.config/rofi/dracula.rasi
 
 ! Whether to load and show icons
 rofi.show-icons: false
@@ -167,13 +167,13 @@ rofi.parse-known-hosts: true
 rofi.display-run: >
 
 ! Set the name to use for drun mode. This is used as prompt and in combi-browser.
-rofi.display-drun: 
+rofi.display-drun:
 
 ! Set command ({cmd}) to execute when running an application.
-rofi.run-command: {cmd}  
+rofi.run-command: {cmd}
 
 ! Set command to execute when running an application in a shell.
-rofi.run-shell-command: {terminal} -e {cmd} 
+rofi.run-shell-command: {terminal} -e {cmd}
 
 ! If set, use an external tool to generate list of executable commands.
 ! Uses 'run-command'.
@@ -192,10 +192,10 @@ rofi.combi-modi: window,run,drun
 ! ----------------------------------------------------------------------------
 
 ! Set the name to use for window mode. This is used as prompt and in combi-browser.
-rofi.display-window: 
+rofi.display-window:
 
 ! Set the name to use for windowcd mode. This is used as prompt and in combi-browser.
-rofi.display-windowcd: 
+rofi.display-windowcd:
 
 ! Format what is being displayed for windows: {field[:len]}
 ! - field: w: Desktop name, t: Title of window, n: Name, r: Role, c: Class.

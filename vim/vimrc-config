@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 " Nerdtree (https://github.com/preservim/nerdtree)
 Plug 'preservim/nerdtree'
 
-" Nerdtree git (https://github.com/Xuyuanp/nerdtree-git-plugin) 
+" Nerdtree git (https://github.com/Xuyuanp/nerdtree-git-plugin)
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Nerdtree icons (https://github.com/ryanoasis/vim-devicons)
@@ -40,7 +40,9 @@ Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Color theme (https://github.com/arcticicestudio/nord-vim)
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'joshdick/onedark.vim'
+ Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 """
@@ -48,7 +50,7 @@ call plug#end()
 """
 " Load nerdtree on startup and move from nerdtree window buffer to file
 " and load liteline at the same time
-autocmd VimEnter * NERDTree 
+autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p | call lightline#update()
 
 " Map nertree to Ctrl+o
@@ -62,7 +64,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 """
 " Theme
 let g:lightline = {
-\ 'colorscheme': 'nord',
+\ 'colorscheme': 'dracula',
 \ }
 
 " Default setting
@@ -74,7 +76,9 @@ set noshowmode
 """
 " Colorscheme
 """
-colorscheme nord
+" colorscheme nord
+" colorscheme dracula
+" colorscheme onedark
 
 """
 " Global Configuration

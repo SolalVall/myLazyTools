@@ -22,7 +22,7 @@ gaps inner 30
 gaps outer 30
 
 # Configure feh
-exec_always --no-startup-id feh --bg-scale ~/Images/ice_wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/Images/mountain_wallpaper.jpeg
 
 #Launch Xresources (used for urxvt)
 exec xrdb ~/.Xresources
@@ -82,7 +82,7 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
@@ -196,4 +196,7 @@ client.urgent		        $background    #282d37    $background  $background
 client.placeholder	        $background    #282D37    $background  $background
 
 # Start polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh
+
+# Lock screen
+bindsym $mod+Shift+l exec $HOME/.config/i3/i3gaps-lock

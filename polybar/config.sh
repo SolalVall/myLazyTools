@@ -1,12 +1,10 @@
-POLYBAR_THEME=hack
+POLYBAR_THEME=forest
 POLYBAR_CONFIG_LOCATION=$HOME/.config/polybar
 POLYBAR_TOOL_LOCATION=$HOME/.lazyTools.d/polybar
-POLYBAR_CONFIG_FILE="polybar-config"
-
-###
-# Install dependencies
-###
-sudo apt install pywal calc networkmanager_dmenurofi
+POLYBAR_BASE_CONFIG_FILE="polybar-config-base"
+POLYBAR_BAR_CONFIG_FILE="polybar-config-bar"
+POLYBAR_MODULE_CONFIG_FILE="polybar-config-modules"
+POLYBAR_COLOR_CONFIG_FILE="polybar-config-colors"
 
 ###
 # Configure polybar in i3 with a theme (https://github.com/adi1090x/polybar-themes)
@@ -19,32 +17,21 @@ cd polybar-themes
 chmod +x setup.sh
 ./setup.sh
 
-## Launch theme
-bash ~/.config/polybar/launch.sh --$POLYBAR_THEME
-#cd polybar-themes/$POLYBAR_THEME
+###
+# Overwite theme with our config
+###
+ln -sfn $POLYBAR_TOOL_LOCATION/$POLYBAR_BASE_CONFIG_FILE $POLYBAR_CONFIG_LOCATION/$POLYBAR_THEME/config.ini
+ln -sfn $POLYBAR_TOOL_LOCATION/$POLYBAR_BAR_CONFIG_FILE $POLYBAR_CONFIG_LOCATION/$POLYBAR_THEME/bar.ini
+ln -sfn $POLYBAR_TOOL_LOCATION/$POLYBAR_MODULE_CONFIG_FILE $POLYBAR_CONFIG_LOCATION/$POLYBAR_THEME/modules.ini
+ln -sfn $POLYBAR_TOOL_LOCATION/$POLYBAR_COLOR_CONFIG_FILE $POLYBAR_CONFIG_LOCATION/$POLYBAR_THEME/colors.ini
 
-## Encsure fonts folder
-#mkdir -p $HOME/.local/share/fonts
-
-## font bitmap reconfig
-#rm /etc/fonts/conf.d/70-no-bitmaps.conf
-
-## Add fonts
-#cp -r fonts/* $HOME/.local/share/fonts
-
-## Reload fonts cache
-#fc-cache -v
-
-## Copy config
-#cp -r * $POLYBAR_CONFIG_LOCATION
-
-## Create symlink to default polybar config file location named config.ini (allow to modify the config file from .lazytools.d folder)
-#ln -s $POLYBAR_TOOL_LOCATION/$POLYBAR_CONFIG_FILE $POLYBAR_CONFIG_LOCATION/config.ini
-## Launch script
-#$POLYBAR_CONFIG_LOCATION/launch.sh
+###
+# Launch the $POLYBAR_THEME
+###
+bash ~/.config/polybar/launch.sh --"$POLYBAR_THEME" 2>/dev/null
 
 ###
 # Clean
 ###
-#cd ../../
-#rm -rf polybar-themes
+cd ..
+rm -rf polybar-themes
