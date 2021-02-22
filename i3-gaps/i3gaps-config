@@ -198,5 +198,8 @@ client.placeholder	        $background    #282D37    $background  $background
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh
 
+# Start compton
+exec_always --no-startup-id compton
+
 # Lock screen
 bindsym $mod+Shift+l exec $HOME/.config/i3/i3gaps-lock
